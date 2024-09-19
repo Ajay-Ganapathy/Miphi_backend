@@ -18,6 +18,10 @@ const transporter = nodemailer.createTransport({
     pass: 'povs kbub aghq ujqy',  // Use the 16-character app password generated here
   },
 });
+
+app.get('/' , (req , res ) => {
+    res.send('hello');
+})
  
 app.post('/send-email', (req, res) => {
   const { fullname, email, Querytype, mobile, message } = req.body;
